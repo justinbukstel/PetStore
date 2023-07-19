@@ -20,7 +20,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 'weld_pond'
+            example: 'test_user'
       responses:
         '200':
           description: See basic info about a given user
@@ -61,7 +61,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 'j_bukstel'
+            example: 'test_user'
       requestBody:
         description: update fields below
         content:
@@ -74,13 +74,13 @@ paths:
                   example: 'test123@test.com'
                 firstname:
                   type: string
-                  example: 'Justin'
+                  example: 'test'
                 id:
                   type: integer
                   example: 2
                 lastname:
                   type: string
-                  example: 'Bukstel'
+                  example: 'user'
                 password:
                   type: string
                   example: "T3test123"
@@ -92,7 +92,7 @@ paths:
                   example: 1
                 username:
                   type: string
-                  example: 'j_bukstel'
+                  example: 'test_user'
         required: true
       responses:
         '200':
@@ -129,7 +129,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 'j_bukstel'
+            example: 'test_user'
       responses:
         '200':
           description: User deleted successfully
@@ -203,25 +203,25 @@ paths:
                   example: 'test@test.com'
                 firstname:
                   type: string
-                  example: 'Justin'
+                  example: 'test'
                 id:
                   type: integer
                   example: 2
                 lastname:
                   type: string
-                  example: 'Bukstel'
+                  example: 'user'
                 password:
                   type: string
-                  example: "T3test123"
+                  example: "test123"
                 phone:
                   type: string
-                  example: "111.222.3333"
+                  example: "1234567890"
                 userStatus:
                   type: boolean
                   example: 1
                 username:
                   type: string
-                  example: 'j_bukstel'
+                  example: 'test_user'
         required: true
       responses:
         201:
@@ -253,10 +253,10 @@ paths:
               properties:
                 username:
                   type: string
-                  example: "j_bukstel"
+                  example: "test_user"
                 password:
                   type: string
-                  example: "T3test123"
+                  example: "test123"
         required: true
       responses:
         '201':
