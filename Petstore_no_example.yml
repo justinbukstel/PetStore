@@ -13,7 +13,13 @@ paths:
         - users
       summary: Retrieves all users
       description: Displays all users with basic information
-      opertationsId: getUser
+      parameters:
+        - name: username
+          in: path
+          description: retrieve username data
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: See basic info about a given user
@@ -40,15 +46,20 @@ paths:
                       type: boolean
                     username:
                       type: string
-          '404':
-            description: User not found
-            content: {}
+                      
     put:
       tags:
         - users
       summary: update data for specific user
       description: update some or all data for specific user
       operationId: updateUser
+      parameters:
+        - name: username
+          in: path
+          description: username to update
+          required: true
+          schema:
+            type: string
       requestBody:
         description: update fields below
         content:
@@ -101,8 +112,13 @@ paths:
         - users 
       summary: user deleted successfully
       description: Delete a user by username
-      operationsId: deleteUser
       parameters:
+        - name: username
+          in: path
+          description: delete user
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: User deleted successfully
@@ -133,7 +149,6 @@ paths:
         - users
       summary: retrieve all users
       description: displays all users
-      operationsId: getUsers
       responses: 
         '200':
           description: See basic info about all users 
@@ -165,7 +180,6 @@ paths:
         - users
       summary: add a user
       description: allows authenticated user to add a user
-      operationsId: addUsers
       requestBody:
         description: Creates new user in system
         content:
@@ -211,7 +225,6 @@ paths:
         - users
       summary: Login to generate auth token
       description: Creates an auth token for use in admin endpoints
-      operationsId: login
       requestBody:
         description: Login to generate auth token
         content:
